@@ -1,0 +1,12 @@
+.modernLight{
+    -fx-background-color: linear-gradient(#ffd5ad, #ffdab7);
+}
+
+.modernDark{
+    -fx-background-color: linear-gradient(#66513D, #756250);
+}
+
+.selected{
+    -fx-background-color: #485238;
+}
+
