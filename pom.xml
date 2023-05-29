@@ -3,10 +3,10 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId><!-- TODO: the groupId of your project (e.g., hu.unideb.inf) --></groupId>
-    <artifactId><!-- TODO: the artifactId of your project --></artifactId>
+    <groupId>hu.unideb.inf</groupId>
+    <artifactId>board-game</artifactId>
     <version>1.0</version>
-    <description><!-- TODO: a short description of your project --></description>
+    <description>Egy 5 sorból és 4 oszlopból álló sakktábla legfelső sorába 4 sötét, legalsó sorába 4 világos futót helyezünk. Cseréljük meg a figurákat, olyan módon, hogy azok futólépésben léphetnek, továbbá nem léphetnek olyan mezőre, amelyet ellentétes színű figura üt!</description>
     <developers>
         <developer>
             <id>ZB5TU5</id>
@@ -26,7 +26,7 @@
         <maven.checkstyle.version>3.2.1</maven.checkstyle.version>
         <maven.surefire.version>3.0.0</maven.surefire.version>
         <jacoco.version>0.8.9</jacoco.version>
-        <exec.mainClass><!-- TODO: the main class of your application that contains the main method --></exec.mainClass>
+        <exec.mainClass>bishops.Main</exec.mainClass>
     </properties>
     <dependencies>
         <dependency>
