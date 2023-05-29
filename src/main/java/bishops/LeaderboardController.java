@@ -67,5 +67,31 @@ public class LeaderboardController {
         stage.show();
         Logger.debug("Kattints vissza!");
     }
+
+    @FXML
+    private void onResetLeaderboard(ActionEvent event) throws IOException {
+        Logger.debug("Kattints");
+        Alert quit = new Alert(Alert.AlertType.CONFIRMATION);
+        quit.setTitle("Ranglista újra");
+        quit.setHeaderText("Biztos vissza akarod állítani a ranglistát?");
+        quit.setContentText("Minden korábbi eredményed elvész!");
+        Optional<ButtonType> result = quit.showAndWait();
+        if (result.get() == ButtonType.OK) {
+            Jdbi jdbi = Jdbi.create(getJdbiDatabasePath());
+            try (Handle handle = jdbi.open()) {
+                handle.execute("DELETE FROM HIGHSCORES");
+            }
+            HomeScreenController.highscoresList.clear();
+            for(var name:names){
+                name.setText("");
+            }
+            for(var score:scores){
+                score.setText("");
+            }
+            Logger.debug("Kattints az OK gombra");
+        }else {
+            Logger.debug("Kattints a Mégse gombra");
+        }
+    }
 }
 
