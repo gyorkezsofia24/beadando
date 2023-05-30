@@ -15,6 +15,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.SVGPath;
 import javafx.scene.paint.Color;
+import java.util.stream.Collectors;
 import javafx.stage.Stage;
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;
